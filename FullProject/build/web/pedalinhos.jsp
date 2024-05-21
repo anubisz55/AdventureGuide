@@ -13,7 +13,7 @@
 </head>
 <body>
     <%@include file="/WEB-INF/jspf/navbar.jspf"%>
-
+A
     <div class="container my-5">
         <h1>Pedalinhos</h1>
         <p>Os Pedalinhos são uma das atrações mais divertidas do parque, permitindo que você explore o lago em um barco a pedal.</p>
