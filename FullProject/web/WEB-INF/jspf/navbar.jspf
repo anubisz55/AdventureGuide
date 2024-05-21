@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">AdventureGuide</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#">AdventureGuide</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
@@ -16,12 +16,17 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="roda-gigante.jsp">Roda Gigante</a></li>         
             <li><a class="dropdown-item" href="barco-viking.jsp">Barco Viking</a></li>
-            <li><a class="dropdown-item" href="carrosel-cavalinhos.jsp">Carrosel de Cavalinhos</a></li>
+            <li><a class="dropdown-item" href="carrossel.jsp">Carrossel de Cavalinhos</a></li>
             <li><a class="dropdown-item" href="splash.jsp">Splash</a></li>
+            <li><a class="dropdown-item" href="tirolesa.jsp">Tirolesa</a></li>
+            <li><a class="dropdown-item" href="big-tower.jsp">Big Tower</a></li>
             <li><a class="dropdown-item" href="montanha-russa.jsp">Montanha Russa</a></li>
-            <li><a class="dropdown-item" href="castelo-terror.jsp">Castelo do Terror</a></li>
-            <li><a class="dropdown-item" href="parede-escalada.jsp">Parede de Escalada</a></li>
+            <li><a class="dropdown-item" href="circus.jsp">Circus</a></li>
+            <li><a class="dropdown-item" href="pula-pula-gigante.jsp">Pula Pula Gigante</a></li>
             <li><a class="dropdown-item" href="xicaras-malucas.jsp">Xícaras Malucas</a></li>
+            <li><a class="dropdown-item" href="patinacao-no-gelo.jsp">Patinação no Gelo</a></li>
+            <li><a class="dropdown-item" href="pedalinhos.jsp">Pedalinhos</a></li>
+            <li><a class="dropdown-item" href="cinema.jsp">Cinema</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -39,6 +44,23 @@
             <li><a class="dropdown-item" href="enfermaria.jsp">Enfermaria</a></li>
           </ul>
         </li>
+        
+        
+     
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Visitante
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="adv_guide1.png">Mapa da Aventura</a></li>         
+            <li><a class="dropdown-item" href="escolher_atracoes.jsp">Escolher Atrações</a></li>
+          </ul>
+        </li>
+        
+        
+        
+        
         <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Link</a>
         </li>
