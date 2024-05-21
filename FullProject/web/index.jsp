@@ -13,7 +13,6 @@
         <%@include file="WEB-INF/jspf/html-head-libs.jspf"%>
     </head>
     <body>
-jhj
         <%@include file="WEB-INF/jspf/navbar.jspf"%>
 
         <h3>Sobre nós!</h3>
