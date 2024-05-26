@@ -14,7 +14,6 @@
 <body>
     <%@include file="/WEB-INF/jspf/navbar.jspf"%>
 
-    
     <div class="container my-5">
         <h1>Carrossel</h1>
         <p>O Carrossel é uma das atrações clássicas do parque, com seus cavalos coloridos e música alegre.</p>
@@ -25,19 +24,21 @@
             <li>Capacidade: Até 20 pessoas por vez</li>
             <li>Duração do passeio: aproximadamente 5 minutos</li>
             <li>Horário de funcionamento: das 10h às 20h</li>
-            
         </ul>
     </div>
-    
-    
+
     <div class="container my-5">
-        
         <p>Divirta-se no emocionante Carrossel do parque!</p>
-        
-        <form action="medir-tempo-espera.jsp" method="post">
+
+        <form action="ControleFilaServlet" method="post">
+            <input type="hidden" name="action" value="medirTempoEspera">
             <button type="submit" class="btn btn-primary">Irei Esperar na Fila</button>
         </form>
     </div>
+    
+    
+    
+
 
     <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%>
 </body>
