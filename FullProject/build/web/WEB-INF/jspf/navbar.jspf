@@ -12,19 +12,21 @@
             Atrações
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="roda-gigante.jsp">Roda Gigante</a></li>         
-            <li><a class="dropdown-item" href="barco-viking.jsp">Barco Viking</a></li>
-            <li><a class="dropdown-item" href="carrossel.jsp">Carrossel de Cavalinhos</a></li>
-            <li><a class="dropdown-item" href="splash.jsp">Splash</a></li>
-            <li><a class="dropdown-item" href="tirolesa.jsp">Tirolesa</a></li>
-            <li><a class="dropdown-item" href="big-tower.jsp">Big Tower</a></li>
-            <li><a class="dropdown-item" href="montanha-russa.jsp">Montanha Russa</a></li>
-            <li><a class="dropdown-item" href="circus.jsp">Circus</a></li>
-            <li><a class="dropdown-item" href="pula-pula-gigante.jsp">Pula Pula Gigante</a></li>
-            <li><a class="dropdown-item" href="xicaras-malucas.jsp">Xícaras Malucas</a></li>
-            <li><a class="dropdown-item" href="patinacao-no-gelo.jsp">Patinação no Gelo</a></li>
-            <li><a class="dropdown-item" href="pedalinhos.jsp">Pedalinhos</a></li>
-            <li><a class="dropdown-item" href="cinema.jsp">Cinema</a></li>
+            <li><a class="dropdown-item" href="big-tower.jsp">1 - Big Tower</a></li>
+                        <li><a class="dropdown-item" href="tirolesa.jsp">2 - Tirolesa</a></li>
+            <li><a class="dropdown-item" href="pedalinhos.jsp">3 - Pedalinhos</a></li>
+            <li><a class="dropdown-item" href="carrossel.jsp">4 - Carrossel de Cavalinhos</a></li>
+            <li><a class="dropdown-item" href="splash.jsp">5 - Splash</a></li>
+            <li><a class="dropdown-item" href="cinema.jsp">6 - Cinema</a></li>
+            <li><a class="dropdown-item" href="circus.jsp">7 - Circus</a></li>
+            <li><a class="dropdown-item" href="montanha-russa.jsp">8 - Montanha Russa</a></li>
+            <li><a class="dropdown-item" href="chapeu-mexicano.jsp">9 - Chapéu Mexicano</a></li>
+            <li><a class="dropdown-item" href="castelo-kids.jsp">10 - Castelo Kids</a></li>
+            <li><a class="dropdown-item" href="xicaras-malucas.jsp">11 - Xícaras Malucas</a></li>
+            <li><a class="dropdown-item" href="pula-pula-gigante.jsp">12 - Pula Pula Gigante</a></li>
+            <li><a class="dropdown-item" href="patinacao-no-gelo.jsp">13 - Patinação no Gelo</a></li>
+            <li><a class="dropdown-item" href="bate-bate.jsp">14 - Bate-Bate</a></li>
+            <li><a class="dropdown-item" href="roda-gigante.jsp">15 - Roda Gigante</a></li>         
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -32,17 +34,17 @@
             Serviços
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="banheiros.jsp">Banheiros (WC 1)</a></li>
-            <li><a class="dropdown-item" href="banheiros2.jsp">Banheiros (WC2)</a></li>
-            <li><a class="dropdown-item" href="sorveteria.jsp">Sorveteria</a></li>
-            <li><a class="dropdown-item" href="lanchonete.jsp">Lanchonete</a></li>
-            <li><a class="dropdown-item" href="restaurante.jsp">Restaurante </a></li>
-            <li><a class="dropdown-item" href="churros.jsp">Churros da Dona Florinda</a></li>
-            <li><a class="dropdown-item" href="enventos_shows.jsp">Eventos e Shows</a></li>
-            <li><a class="dropdown-item" href="ent_saida_esta.jsp">Entrada/Saída e Estacionamento</a></li>
-            <li><a class="dropdown-item" href="mini_shop.jsp">Mini Shop</a></li>
-            <li><a class="dropdown-item" href="salva_vidas.jsp">Salva Vidas</a></li>
-            <li><a class="dropdown-item" href="enfermaria.jsp">Enfermaria</a></li>
+            <li><a class="dropdown-item" href="banheiros.jsp">1 - Banheiros (WC 1)</a></li>
+            <li><a class="dropdown-item" href="banheiros2.jsp">2 - Banheiros (WC2)</a></li>
+            <li><a class="dropdown-item" href="enfermaria.jsp">3 - Enfermaria</a></li>
+            <li><a class="dropdown-item" href="salva_vidas.jsp">4 - Salva Vidas</a></li>
+            <li><a class="dropdown-item" href="enventos_shows.jsp">5 - Eventos e Shows</a></li>
+            <li><a class="dropdown-item" href="ent_saida_esta.jsp">6 - Entrada/Saída e Estacionamento</a></li>
+            <li><a class="dropdown-item" href="mini_shop.jsp">7 - Mini Shop</a></li>
+            <li><a class="dropdown-item" href="churros.jsp">8 - Churros da Dona Florinda</a></li>
+            <li><a class="dropdown-item" href="lanchonete.jsp">9 - Lanchonete</a></li>
+            <li><a class="dropdown-item" href="restaurante.jsp">10 - Restaurante </a></li>
+            <li><a class="dropdown-item" href="sorveteria.jsp">11 - Sorveteria</a></li>
           </ul>
         </li>
         
