@@ -33,6 +33,8 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="banheiros.jsp">Banheiros</a></li>
+                        <li><a class="dropdown-item" href="banheiros2.jsp">Banheiros</a></li>
+
             <li><a class="dropdown-item" href="sorveteria.jsp">Sorveteria</a></li>
             <li><a class="dropdown-item" href="pastelaria.jsp">Pastelaria</a></li>
             <li><a class="dropdown-item" href="restaurante1.jsp">Restaurante 1</a></li>
