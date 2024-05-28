@@ -21,6 +21,14 @@
             <li>Ingresso: R$ 20,00 por pessoa</li>
         </ul>
     </div>
+    <div class="container my-5">
+        <p>Divirta-se na emocionante Roda Gigante do parque!</p>
+
+        <form action="ControleFilaServlet" method="post">
+            <input type="hidden" name="action" value="medirTempoEspera">
+            <button type="submit" class="btn btn-primary">Irei Esperar na Fila</button>
+        </form>
+    </div>
     
     
     <form action="">

@@ -73,6 +73,14 @@
             
         </ul>
     </div>
+    <div class="container my-5">
+        <p>Divirta-se na emocionante Xícaras Malucas do parque!</p>
+
+        <form action="ControleFilaServlet" method="post">
+            <input type="hidden" name="action" value="medirTempoEspera">
+            <button type="submit" class="btn btn-primary">Irei Esperar na Fila</button>
+        </form>
+    </div>
 
     <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%>
 </body>
