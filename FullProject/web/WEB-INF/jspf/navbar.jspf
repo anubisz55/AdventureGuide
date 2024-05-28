@@ -32,15 +32,16 @@
             Serviços
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="banheiros.jsp">Banheiros</a></li>
-                        <li><a class="dropdown-item" href="banheiros2.jsp">Banheiros</a></li>
-
+            <li><a class="dropdown-item" href="banheiros.jsp">Banheiros (WC 1)</a></li>
+            <li><a class="dropdown-item" href="banheiros2.jsp">Banheiros (WC2)</a></li>
             <li><a class="dropdown-item" href="sorveteria.jsp">Sorveteria</a></li>
-            <li><a class="dropdown-item" href="pastelaria.jsp">Pastelaria</a></li>
-            <li><a class="dropdown-item" href="restaurante1.jsp">Restaurante 1</a></li>
-            <li><a class="dropdown-item" href="restaurante2.jsp">Restaurante 2</a></li>
-            <li><a class="dropdown-item" href="restaurante3.jsp">Restaurante 3</a></li>
-            <li><a class="dropdown-item" href="tirar-duvidas.jsp">Tirar dúvidas</a></li>
+            <li><a class="dropdown-item" href="lanchonete.jsp">Lanchonete</a></li>
+            <li><a class="dropdown-item" href="restaurante.jsp">Restaurante </a></li>
+            <li><a class="dropdown-item" href="churros.jsp">Churros da Dona Florinda</a></li>
+            <li><a class="dropdown-item" href="enventos_shows.jsp">Eventos e Shows</a></li>
+            <li><a class="dropdown-item" href="ent_saida_esta.jsp">Entrada/Saída e Estacionamento</a></li>
+            <li><a class="dropdown-item" href="mini_shop.jsp">Mini Shop</a></li>
+            <li><a class="dropdown-item" href="salva_vidas.jsp">Salva Vidas</a></li>
             <li><a class="dropdown-item" href="enfermaria.jsp">Enfermaria</a></li>
           </ul>
         </li>
