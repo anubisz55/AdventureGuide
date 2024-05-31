@@ -1,19 +1,18 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg" style="background-color: #3E7AC3;">
   <div class="container-fluid">
-      <a class="navbar-brand" href="sobre_nos_ari_nub.jsp">AdventureGuide</a>
-     <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon bg-dark"></span>
-  </button>
+    <a class="navbar-brand" href="index.jsp">AdventureGuide</a>
+    <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon bg-dark"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-       
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Atrações
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="big-tower.jsp">1 - Big Tower</a></li>
-                        <li><a class="dropdown-item" href="tirolesa.jsp">2 - Tirolesa</a></li>
+            <li><a class="dropdown-item" href="tirolesa.jsp">2 - Tirolesa</a></li>
             <li><a class="dropdown-item" href="pedalinhos.jsp">3 - Pedalinhos</a></li>
             <li><a class="dropdown-item" href="carrossel.jsp">4 - Carrossel de Cavalinhos</a></li>
             <li><a class="dropdown-item" href="splash.jsp">5 - Splash</a></li>
@@ -26,7 +25,7 @@
             <li><a class="dropdown-item" href="pula-pula-gigante.jsp">12 - Pula Pula Gigante</a></li>
             <li><a class="dropdown-item" href="patinacao-no-gelo.jsp">13 - Patinação no Gelo</a></li>
             <li><a class="dropdown-item" href="bate-bate.jsp">14 - Bate-Bate</a></li>
-            <li><a class="dropdown-item" href="roda-gigante.jsp">15 - Roda Gigante</a></li>         
+            <li><a class="dropdown-item" href="roda-gigante.jsp">15 - Roda Gigante</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -43,32 +42,24 @@
             <li><a class="dropdown-item" href="mini_shop.jsp">7 - Mini Shop</a></li>
             <li><a class="dropdown-item" href="churros.jsp">8 - Churros da Dona Florinda</a></li>
             <li><a class="dropdown-item" href="lanchonete.jsp">9 - Lanchonete</a></li>
-            <li><a class="dropdown-item" href="restaurante.jsp">10 - Restaurante </a></li>
+            <li><a class="dropdown-item" href="restaurante.jsp">10 - Restaurante</a></li>
             <li><a class="dropdown-item" href="sorveteria.jsp">11 - Sorveteria</a></li>
           </ul>
         </li>
-        
-        
-     
-        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Mapa da Aventura
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="Adventure guide.png"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-map" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.5.5 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103M10 1.91l-4-.8v12.98l4 .8zm1 12.98 4-.8V1.11l-4 .8zm-6-.8V1.11l-4 .8v12.98z"/>
-</svg>  Abrir</a></li>         
-            
+              <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.5.5 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103M10 1.91l-4-.8v12.98l4 .8zm1 12.98 4-.8V1.11l-4 .8v12.98z"/>
+            </svg>  Abrir</a></li>
           </ul>
         </li>
-     
       </ul>
-     
     </div>
   </div>
 </nav>
-      
       
       
 
