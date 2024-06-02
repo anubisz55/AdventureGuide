@@ -64,9 +64,15 @@
             <li>Restrições: Altura mínima de 1 metro</li>
             <li>Emocionante e divertida para toda a família</li>
         </ul>
-        <a href="bate-bate-reserva.jsp" class="btn btn-primary">Reservar Agora</a>
     </div>
+    <div class="container my-5">
+        <p>Divirta-se no emocionante Bate-Bate do parque!</p>
 
+        <form action="ControleFilaServlet" method="post">
+            <input type="hidden" name="action" value="medirTempoEspera">
+            <button type="submit" class="btn btn-primary">Irei Esperar na Fila</button>
+        </form>
+    </div>
     <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%>
 </body>
 </html>

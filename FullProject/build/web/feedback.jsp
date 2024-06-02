@@ -32,15 +32,19 @@
         </div>
         <button type="submit" class="btn btn-primary">Enviar Feedback</button>
         
-        <a href="pagina-inicial.jsp" class="btn btn-primary">Voltar</a>
-    </form>
-   
-</div>
+        <a href="sair-fila.jsp" class="btn btn-primary">Voltar </a>
         
-                
-         
-         
-         
+
+        
+    </form>
+
+</div>
+            
+                      
          <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%>
+         
+ <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%>
+
+   
     </body>
 </html>
