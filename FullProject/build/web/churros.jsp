@@ -57,7 +57,7 @@
         <h1>Churros da Dona Florinda</h1>
         <p>Os Churros da Dona Florinda são uma delícia imperdível no parque, com churros quentinhos e crocantes recheados com doce de leite ou chocolate.</p>
         <p>Aproveite para saborear essa iguaria enquanto passeia pelo parque!</p>
-        <img src="img/churros-dona-florinda.jpg" alt="Churros da Dona Florinda" class="img-fluid my-4">
+        <img src="churros.png" alt="Churros da Dona Florinda" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
         <h2>Informações Importantes</h2>
         <ul>
             <li>Opções de recheio: Doce de Leite, Chocolate, Nutella, Goiabada e Beijinho</li>

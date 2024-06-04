@@ -57,7 +57,7 @@
         <h1>Banheiros (WC 1 - Próximo a Roda Gigante)</h1>
         <p>O parque conta com banheiros limpos e bem conservados, localizados em pontos estratégicos para sua conveniência.</p>
         <p>Fique à vontade para utilizar os banheiros sempre que necessário durante sua visita.</p>
-        <img src="img/banheiros.jpg" alt="Banheiros" class="img-fluid my-4">
+        <img src="banheiro1.png" alt="Banheiro 1" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
         <h2>Informações Importantes</h2>
         <ul>
             <li>Banheiros masculinos e femininos disponíveis</li>

@@ -13,7 +13,7 @@
         <style>
         body {
             font-family: Arial, sans-serif; /* Mudança na fonte */
-            background-color: #b79adb; /* Cor de fundo */
+            background-color: #D3D3FD; /* Cor de fundo */
             color: #333; /* Cor do texto */
         }
 
@@ -58,12 +58,12 @@
 </head>
 <body>
     <%@include file="/WEB-INF/jspf/navbar.jspf"%>
-A
+
     <div class="container my-5">
         <h1>Pedalinhos</h1>
         <p>Os Pedalinhos são uma das atrações mais divertidas do parque, permitindo que você explore o lago em um barco a pedal.</p>
         <p>Você pode desfrutar de uma vista panorâmica do parque enquanto pedala em um barco confortável e seguro.</p>
-        <img src="img/pedalinhos.jpg" alt="Pedalinhos" class="img-fluid my-4">
+        <img src="pedalinhos.png" alt="Pedalinhos" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
         <h2>Informações Importantes</h2>
         <ul>
             <li>Duração do passeio: aproximadamente 30 minutos</li>

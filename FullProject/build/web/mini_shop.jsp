@@ -59,7 +59,7 @@
         <p>Você encontrará uma variedade de snacks, bebidas, souvenirs e itens essenciais para tornar sua visita ainda melhor.</p>
 	<p>Você também encontrará uma variedade de lembrancinhas, itens decorativos, brinquedos e roupas decorativas do parque.</p>
 	<p>Torne sua experiência uma memória significativa, aproveite e leve uma lembrança deste momento inesquecível!</p>
-        <img src="img/mini-shop.jpg" alt="Mini Shop" class="img-fluid my-4">
+        <img src="mini-shop.png" alt="Mini-Shop" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
         <h2>Informações Importantes</h2>
         <ul>
             <li>Horário de funcionamento: das 10h às 20h</li>

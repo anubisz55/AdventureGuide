@@ -57,7 +57,7 @@
         <h1>Sorveteria</h1>
         <p>A Sorveteria é o lugar perfeito para se refrescar e saborear deliciosos sorvetes artesanais em uma variedade de sabores.</p>
         <p>Desfrute de uma pausa do calor e escolha entre cones, casquinhas, sundaes e muito mais!</p>
-        <img src="img/sorveteria.jpg" alt="Sorveteria" class="img-fluid my-4">
+        <img src="sorveteria.png" alt="Sorveteria" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
         <h2>Informações Importantes</h2>
         <ul>
             <li>Variedade de sabores de sorvete disponíveis</li>

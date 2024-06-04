@@ -14,7 +14,7 @@
         <style>
         body {
             font-family: Arial, sans-serif; /* Mudança na fonte */
-            background-color: #b79adb; /* Cor de fundo */
+            background-color: #D3D3FD; /* Cor de fundo */
             color: #333; /* Cor do texto */
         }
 
@@ -64,7 +64,7 @@
         <h1>Splash</h1>
         <p>O Splash é uma atração molhada e divertida para toda a família, com um toboágua gigante e uma piscina refrescante.</p>
         <p>Prepare-se para se molhar e se divertir na atração Splash!</p>
-        <img src="img/splash.jpg" alt="Splash" class="img-fluid my-4">
+        <img src="splash.png" alt="Splash" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
         <h2>Informações Importantes</h2>
         <ul>
             <li>Altura mínima permitida: 1,10 metros</li>

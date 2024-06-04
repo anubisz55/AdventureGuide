@@ -13,7 +13,7 @@
         <style>
         body {
             font-family: Arial, sans-serif; /* Mudança na fonte */
-            background-color: #b79adb; /* Cor de fundo */
+            background-color: #D3D3FD; /* Cor de fundo */
             color: #333; /* Cor do texto */
         }
 
@@ -63,7 +63,7 @@
         <h1>Montanha Russa</h1>
         <p>A Montanha Russa é uma das atrações mais emocionantes do parque, com subidas, descidas e loopings que vão deixar você com o coração acelerado.</p>
         <p>Prepare-se para uma viagem cheia de adrenalina e diversão na Montanha Russa!</p>
-        <img src="img/montanha-russa.jpg" alt="Montanha Russa" class="img-fluid my-4">
+        <img src="montanha-russa.png" alt="Montanha Russa" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
         <h2>Informações Importantes</h2>
         <ul>
             <li>Altura mínima permitida: 1,40 metros</li>

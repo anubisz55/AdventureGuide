@@ -57,7 +57,7 @@
         <h1>Restaurante</h1>
         <p>O Restaurante do parque oferece uma experiência gastronômica completa, com pratos deliciosos e ambiente agradável.</p>
         <p>Desfrute de uma refeição saborosa durante sua visita e recarregue as energias para aproveitar ainda mais o parque.</p>
-        <img src="img/restaurante.jpg" alt="Restaurante" class="img-fluid my-4">
+        <img src="restaurante_1.png" alt="Restaurante" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
         <h2>Informações Importantes</h2>
         <ul>
             <li>Cardápio variado com opções de pratos típicos e internacionais</li>

@@ -37,7 +37,7 @@
             <li><a class="dropdown-item" href="banheiros2.jsp">2 - Banheiros (WC2)</a></li>
             <li><a class="dropdown-item" href="enfermaria.jsp">3 - Enfermaria</a></li>
             <li><a class="dropdown-item" href="salva_vidas.jsp">4 - Salva Vidas</a></li>
-            <li><a class="dropdown-item" href="enventos_shows.jsp">5 - Eventos e Shows</a></li>
+            <li><a class="dropdown-item" href="eventos_shows.jsp">5 - Eventos e Shows</a></li>
             <li><a class="dropdown-item" href="ent_saida_esta.jsp">6 - Entrada/Saída e Estacionamento</a></li>
             <li><a class="dropdown-item" href="mini_shop.jsp">7 - Mini Shop</a></li>
             <li><a class="dropdown-item" href="churros.jsp">8 - Churros da Dona Florinda</a></li>

@@ -13,7 +13,7 @@
         <style>
         body {
             font-family: Arial, sans-serif; /* Mudança na fonte */
-            background-color: #b79adb; /* Cor de fundo */
+            background-color: #D3D3FD; /* Cor de fundo */
             color: #333; /* Cor do texto */
         }
 
@@ -63,7 +63,8 @@
         <h1>Carrossel</h1>
         <p>O Carrossel é uma das atrações clássicas do parque, com seus cavalos coloridos e música alegre.</p>
         <p>Desfrute de um passeio nostálgico e divertido no Carrossel, uma atração para todas as idades.</p>
-        <img src="img/carrossel.jpg" alt="Carrossel" class="img-fluid my-4">
+        <img src="carrossel.png" alt="Carrossel" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
+
         <h2>Informações Importantes</h2>
         <ul>
             <li>Capacidade: Até 20 pessoas por vez</li>

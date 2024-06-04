@@ -14,7 +14,7 @@
         <style>
         body {
             font-family: Arial, sans-serif; /* Mudança na fonte */
-            background-color: #b79adb; /* Cor de fundo */
+            background-color: #D3D3FD; /* Cor de fundo */
             color: #333; /* Cor do texto */
         }
 
@@ -64,7 +64,7 @@
         <h1>Xícaras Malucas</h1>
         <p>As Xícaras Malucas são uma atração clássica e divertida para toda a família, com xícaras coloridas que giram e dançam.</p>
         <p>Prepare-se para uma viagem maluca e emocionante nas Xícaras Malucas!</p>
-        <img src="img/xicaras-malucas.jpg" alt="Xícaras Malucas" class="img-fluid my-4">
+        <img src="xicaras-malucas.png" alt="Xícaras Malucas" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
         <h2>Informações Importantes</h2>
         <ul>
             <li>Capacidade: Até 4 pessoas por xícara</li>

@@ -57,7 +57,7 @@
         <h1>Salva-Vidas</h1>
         <p>O Salva-Vidas está localizado próximo à atração Splash, garantindo a segurança de todos os visitantes que se divertem na piscina e toboágua.</p>
         <p>Nossa equipe de salva-vidas altamente treinada está sempre atenta para garantir a diversão de forma segura.</p>
-        <img src="img/salva-vidas.jpg" alt="Salva-Vidas" class="img-fluid my-4">
+        <img src="salva-vidas.png" alt="Salva Vidas" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
         <h2>Informações Importantes</h2>
         <ul>
             <li>Salva-vidas em serviço durante todo o horário de funcionamento da atração Splash</li>

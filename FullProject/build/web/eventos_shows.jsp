@@ -57,7 +57,7 @@
         <h1>Eventos e Shows</h1>
         <p>O Espaço de Eventos e Shows é um local versátil e emocionante, onde acontecem apresentações, shows e atividades especiais.</p>
         <p>Fique atento à programação para não perder nenhuma das atrações imperdíveis!</p>
-        <img src="img/eventos-shows.jpg" alt="Eventos e Shows" class="img-fluid my-4">
+        <img src="eventos-shows.png" alt="Eventos e Shows" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
         <h2>Informações Importantes</h2>
         <ul>
             <li>Capacidade: 1000 pessoas</li>

@@ -14,7 +14,7 @@
         <style>
         body {
             font-family: Arial, sans-serif; /* Mudança na fonte */
-            background-color: #b79adb; /* Cor de fundo */
+            background-color: #D3D3FD; /* Cor de fundo */
             color: #333; /* Cor do texto */
         }
 
@@ -64,7 +64,7 @@
         <h1>Tirolesa</h1>
         <p>A Tirolesa é uma das atrações mais emocionantes do parque, proporcionando uma experiência única de voo sobre a paisagem.</p>
         <p>Você irá deslizar por cabos de aço a uma altura de 50 metros, com uma vista deslumbrante do parque.</p>
-        <img src="img/tirolesa.jpg" alt="Tirolesa" class="img-fluid my-4">
+        <img src="tirolesa.png" alt="Tirolesa" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
         <h2>Informações Importantes</h2>
         <ul>
             <li>Altura mínima permitida: 1,40 metros</li>

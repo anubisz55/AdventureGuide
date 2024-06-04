@@ -57,7 +57,7 @@
         <h1>Lanchonete</h1>
         <p>A Lanchonete do parque oferece uma variedade de opções saborosas para saciar sua fome durante sua visita.</p>
         <p>Encontre desde lanches rápidos até refeições completas, tudo com qualidade e preços acessíveis.</p>
-        <img src="img/lanchonete.jpg" alt="Lanchonete" class="img-fluid my-4">
+        <img src="lanchonete.png" alt="Lanchonete" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
         <h2>Informações Importantes</h2>
         <ul>
             <li>Cardápio variado com opções para todos os gostos</li>

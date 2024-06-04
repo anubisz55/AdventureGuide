@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: Arial, sans-serif; /* Mudança na fonte */
-            background-color: #b79adb; /* Cor de fundo */
+            background-color: #D3D3FD; /* Cor de fundo */
             color: #333; /* Cor do texto */
         }
 
@@ -59,7 +59,9 @@
         <h1>Big Tower</h1>
         <p>A Big Tower é uma das atrações mais emocionantes do parque, proporcionando uma queda livre de tirar o fôlego.</p>
         <p>Prepare-se para uma experiência de adrenalina e diversão na Big Tower, uma atração para os corajosos!</p>
-        <img src="img/big-tower.jpg" alt="Big Tower" class="img-fluid my-4">
+        <img src="big-tower2.png" alt="Big Tower" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
+
+
         <h2>Informações Importantes</h2>
         <ul>
             <li>Altura da Torre: 80 metros</li>

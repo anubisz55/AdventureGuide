@@ -7,7 +7,7 @@
         <style>
         body {
             font-family: Arial, sans-serif; /* Mudança na fonte */
-            background-color: #b79adb; /* Cor de fundo */
+            background-color: #D3D3FD; /* Cor de fundo */
             color: #333; /* Cor do texto */
         }
 
@@ -57,7 +57,7 @@
         <h1>Bate-Bate</h1>
         <p>Prepare-se para uma experiência de impacto com o Bate-Bate Uma atração emocionante que garante risadas e adrenalina para todas as idades.</p>
         <p>Bate e divirta-se em um passeio cheio de emoção e alegria. O Bate-Bate é uma experiência imperdível no parque!</p>
-        <img src="img/bate-bate.jpg" alt="Bate-Bate" class="img-fluid my-4">
+        <img src="bate-bate.png" alt="Bate-Bate" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
         <h2>Informações Importantes</h2>
         <ul>
             <li>Capacidade: 2 pessoas por bate</li>

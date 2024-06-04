@@ -57,7 +57,7 @@
         <h1>Entrada e Estacionamento</h1>
         <p>A entrada do parque é bem sinalizada e o estacionamento é amplo e seguro, com vagas suficientes para todos os visitantes.</p>
         <p>Aproveite para deixar seu veículo em um local conveniente e seguro antes de entrar no parque.</p>
-        <img src="img/entrada-estacionamento.jpg" alt="Entrada e Estacionamento" class="img-fluid my-4">
+        <img src="ent_saida_esta.png" alt="Entrada/Saída e Estacionamento" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
         <h2>Informações Importantes</h2>
         <ul>
             <li>Estacionamento gratuito para visitantes</li>

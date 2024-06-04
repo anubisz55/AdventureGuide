@@ -13,7 +13,7 @@
         <style>
         body {
             font-family: Arial, sans-serif; /* Mudança na fonte */
-            background-color: #b79adb; /* Cor de fundo */
+            background-color: #D3D3FD; /* Cor de fundo */
             color: #333; /* Cor do texto */
         }
 
@@ -63,7 +63,7 @@
         <h1>Cinema</h1>
         <p>O Cinema é uma atração imperdível do parque, oferecendo filmes emocionantes e divertidos para toda a família.</p>
         <p>Desfrute de uma experiência cinematográfica única no Cinema do parque!</p>
-        <img src="img/cinema.jpg" alt="Cinema" class="img-fluid my-4">
+        <img src="cinema.png" alt="Cinema" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
         <h2>Informações Importantes</h2>
         <ul>
             <li>Programação: Filmes em exibição diariamente</li>

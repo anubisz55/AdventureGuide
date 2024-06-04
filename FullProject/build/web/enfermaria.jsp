@@ -57,7 +57,7 @@
         <h1>Enfermaria</h1>
         <p>A Enfermaria do parque é um local dedicado ao atendimento de primeiros socorros e cuidados médicos para visitantes que necessitam de assistência.</p>
         <p>Nossa equipe de profissionais está preparada para oferecer suporte em caso de emergências ou necessidades de saúde durante sua visita.</p>
-        <img src="img/enfermaria.jpg" alt="Enfermaria" class="img-fluid my-4">
+        <img src="enfermaria.png" alt="Enfermaria" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
         <h2>Informações Importantes</h2>
         <ul>
             <li>Equipe médica disponível durante todo o horário de funcionamento</li>
