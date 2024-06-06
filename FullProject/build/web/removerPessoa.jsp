@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 S
-<%@ page import="ControleFilaEspera" %> <!-- Substitua "seu_pacote" pelo pacote onde está a classe ControleFilaEspera %>
+<%@ page import="model.ControleFilaEspera" %> 
 
 <%
     ControleFilaEspera controleFila = new ControleFilaEspera();
