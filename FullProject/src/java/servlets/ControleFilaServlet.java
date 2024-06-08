@@ -37,6 +37,8 @@ public class ControleFilaServlet extends HttpServlet {
             controleFila.adicionarPessoaFila();
         } else if ("remover".equals(action)) {
             controleFila.removerPessoaFila();
+            response.sendRedirect("feedback.jsp");
+            return;
         } else if ("medirTempoEspera".equals(action)) {
             Duration tempoMedioEspera = controleFila.calcularTempoMedioEspera();
             request.setAttribute("tempoMedioEspera", tempoMedioEspera);
@@ -58,4 +60,20 @@ public class ControleFilaServlet extends HttpServlet {
     public String getServletInfo() {
         return "Controle da Fila de Espera";
     }
+    
+    @Override
+protected void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+    String action = request.getParameter("action");
+
+    if ("listarFeedbacks".equals(action)) {
+        FeedbackDAO feedbackDAO = (FeedbackDAO) getServletContext().getAttribute("feedbackDAO");
+        request.setAttribute("feedbacks", feedbackDAO.getFeedbacks());
+        request.getRequestDispatcher("listarFeedbacks.jsp").forward(request, response);
+        return;
+    }
+
+    response.sendRedirect("ControleFilaEspera.jsp");
+}
+
 }

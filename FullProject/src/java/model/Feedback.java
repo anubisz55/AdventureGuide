@@ -4,20 +4,25 @@
  */
 package model;
 
+import java.time.LocalDateTime;
+
 public class Feedback {
     private int id;
     private String nickname;
     private String service;
     private String comments;
-    private String timestamp;
+    private LocalDateTime timestamp;
 
-    public Feedback(int id, String nickname, String service, String comments, String timestamp) {
+    public Feedback(int id, String nickname, String service, String comments, LocalDateTime timestamp) {
         this.id = id;
         this.nickname = nickname;
         this.service = service;
         this.comments = comments;
         this.timestamp = timestamp;
     }
+
+    // Construtor vazio para uso no DAO
+    public Feedback() {}
 
     // Getters e setters
     public int getId() {
@@ -52,12 +57,11 @@ public class Feedback {
         this.comments = comments;
     }
 
-    public String getTimestamp() {
+    public LocalDateTime getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(String timestamp) {
+    public void setTimestamp(LocalDateTime timestamp) {
         this.timestamp = timestamp;
     }
 }
-

@@ -56,6 +56,12 @@
             </svg>  Abrir</a></li>
           </ul>
         </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="ControleFilaServlet?action=listarFeedbacks">Ver Feedbacks</a>
+        </li>
+        
+        
       </ul>
     </div>
   </div>

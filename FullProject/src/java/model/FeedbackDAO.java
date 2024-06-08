@@ -5,84 +5,74 @@
 package model;
 
 import java.sql.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FeedbackDAO {
-    public static final String CLASS_NAME = "org.sqliteJDBC";
-    private String url = "jdbc:sqlite:feedback.db";
 
-    public FeedbackDAO() {
-        try (Connection conn = DriverManager.getConnection(url)) {
-            if (conn != null) {
-                System.out.println("Connected to the database");
-                createTable();
-            }
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
+    private static final String DB_URL = "jdbc:sqlite:feedback.db";
+
+    static {
+        try {
+            // Carrega o driver JDBC do SQLite
+            Class.forName("org.sqlite.JDBC");
+        } catch (ClassNotFoundException e) {
+            System.err.println("Erro ao carregar o driver SQLite: " + e.getMessage());
         }
     }
 
-    private void createTable() {
-        String sql = "CREATE TABLE IF NOT EXISTS feedback ("
-                   + "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                   + "nickname TEXT NOT NULL, "
-                   + "service TEXT NOT NULL, "
-                   + "comments TEXT NOT NULL, "
-                   + "timestamp DATETIME DEFAULT CURRENT_TIMESTAMP"
-                   + ");";
+    public FeedbackDAO() {
+        createDatabaseAndTable();
+    }
 
-        try (Connection conn = DriverManager.getConnection(url);
-             Statement stmt = conn.createStatement()) {
-            stmt.execute(sql);
+    private void createDatabaseAndTable() {
+        String sql = "CREATE TABLE IF NOT EXISTS feedbacks ("
+                + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + "nickname TEXT NOT NULL,"
+                + "service TEXT NOT NULL,"
+                + "comments TEXT NOT NULL,"
+                + "timestamp DATETIME DEFAULT CURRENT_TIMESTAMP"
+                + ")";
+        try (Connection conn = DriverManager.getConnection(DB_URL)) {
+            if (conn != null) {
+                try (Statement stmt = conn.createStatement()) {
+                    stmt.execute(sql);
+                }
+            }
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            System.err.println("Erro ao criar a tabela de feedbacks: " + e.getMessage());
         }
     }
 
     public void addFeedback(String nickname, String service, String comments) {
-        String sql = "INSERT INTO feedback(nickname, service, comments) VALUES(?, ?, ?)";
-
-        try (Connection conn = DriverManager.getConnection(url);
+        String sql = "INSERT INTO feedbacks(nickname, service, comments) VALUES(?, ?, ?)";
+        try (Connection conn = DriverManager.getConnection(DB_URL);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, nickname);
             pstmt.setString(2, service);
             pstmt.setString(3, comments);
             pstmt.executeUpdate();
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            System.err.println("Erro ao adicionar feedback: " + e.getMessage());
         }
     }
 
     public List<Feedback> getFeedbacks() {
         List<Feedback> feedbacks = new ArrayList<>();
-        String sql = "SELECT id, nickname, service, comments, timestamp FROM feedback";
-
-        try (Connection conn = DriverManager.getConnection(url);
-             PreparedStatement pstmt  = conn.prepareStatement(sql);
-             ResultSet rs  = pstmt.executeQuery()) {
-
+        String sql = "SELECT nickname, comments, timestamp FROM feedbacks";
+        try (Connection conn = DriverManager.getConnection(DB_URL);
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
             while (rs.next()) {
-                Feedback feedback = new Feedback(
-                        rs.getInt("id"),
-                        rs.getString("nickname"),
-                        rs.getString("service"),
-                        rs.getString("comments"),
-                        rs.getString("timestamp")
-                );
+                Feedback feedback = new Feedback();
+                feedback.setNickname(rs.getString("nickname"));
+                feedback.setComments(rs.getString("comments"));
+                feedback.setTimestamp(rs.getTimestamp("timestamp").toLocalDateTime());
                 feedbacks.add(feedback);
             }
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            System.err.println("Erro ao obter feedbacks: " + e.getMessage());
         }
-
         return feedbacks;
     }
 }
-

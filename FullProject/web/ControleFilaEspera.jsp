@@ -45,8 +45,6 @@
     <p>Tempo médio de espera na fila: <%= tempoMedioEspera.getSeconds() %> segundos</p>
     <p>Tempo de espera da última pessoa: <%= tempoEsperaAtual.getSeconds() %> segundos</p>
     
-    
-    
     <div class="container my-5">
     <h2>Feedbacks</h2>
     <%
