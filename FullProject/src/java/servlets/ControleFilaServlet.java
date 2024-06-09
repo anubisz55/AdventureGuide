@@ -7,6 +7,7 @@ package servlets;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Random;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,7 +41,10 @@ public class ControleFilaServlet extends HttpServlet {
             response.sendRedirect("feedback.jsp");
             return;
         } else if ("medirTempoEspera".equals(action)) {
-            Duration tempoMedioEspera = controleFila.calcularTempoMedioEspera();
+            // Gera um tempo de espera aleatório entre 60 e 300 segundos
+            Random random = new Random();
+            int tempoMedioEsperaSegundos = 60 + random.nextInt(241);
+            Duration tempoMedioEspera = Duration.ofSeconds(tempoMedioEsperaSegundos);
             request.setAttribute("tempoMedioEspera", tempoMedioEspera);
             request.getRequestDispatcher("medir-tempo-espera.jsp").forward(request, response);
             return;
@@ -60,20 +64,19 @@ public class ControleFilaServlet extends HttpServlet {
     public String getServletInfo() {
         return "Controle da Fila de Espera";
     }
-    
+
     @Override
-protected void doGet(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
-    String action = request.getParameter("action");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String action = request.getParameter("action");
 
-    if ("listarFeedbacks".equals(action)) {
-        FeedbackDAO feedbackDAO = (FeedbackDAO) getServletContext().getAttribute("feedbackDAO");
-        request.setAttribute("feedbacks", feedbackDAO.getFeedbacks());
-        request.getRequestDispatcher("listarFeedbacks.jsp").forward(request, response);
-        return;
+        if ("listarFeedbacks".equals(action)) {
+            FeedbackDAO feedbackDAO = (FeedbackDAO) getServletContext().getAttribute("feedbackDAO");
+            request.setAttribute("feedbacks", feedbackDAO.getFeedbacks());
+            request.getRequestDispatcher("listarFeedbacks.jsp").forward(request, response);
+            return;
+        }
+
+        response.sendRedirect("ControleFilaEspera.jsp");
     }
-
-    response.sendRedirect("ControleFilaEspera.jsp");
-}
-
 }

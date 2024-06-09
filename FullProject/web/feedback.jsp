@@ -30,7 +30,7 @@
                 <textarea class="form-control" id="comments" name="comments" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Enviar Feedback</button>
-            <a href="sair-fila.jsp" class="btn btn-primary">Voltar</a>
+            <a href="index.jsp" class="btn btn-primary">Voltar</a>
         </form>
     </div>
     

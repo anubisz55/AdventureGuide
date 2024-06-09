@@ -25,7 +25,7 @@
         <p>Clique em OK para aceitar</p>
       
         <a href="sair-fila.jsp" class="btn btn-primary">OK</a>
-        <a href="carrossel.jsp" class="btn btn-primary">Voltar</a>
+        <a href="index.jsp" class="btn btn-primary">Voltar</a>
     </div>
 
     <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%>
