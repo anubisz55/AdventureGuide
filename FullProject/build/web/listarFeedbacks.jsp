@@ -4,36 +4,39 @@
     Author     : ariad
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import="java.util.List" %>
-<%@ page import="model.Feedback" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%> <!-- Define o tipo de conteúdo e a codificação da página -->
+
+<%@ page import="java.util.List" %> <!-- Importa a classe List do pacote java.util -->
+<%@ page import="model.Feedback" %> <!-- Importa a classe Feedback do pacote model -->
 
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Lista de Feedbacks</title>
-    <%@include file="/WEB-INF/jspf/html-head-libs.jspf"%>
+    <meta charset="UTF-8"> <!-- Define a codificação da página -->
+    <title>Lista de Feedbacks</title> <!-- Define o título da página -->
+    <%@include file="/WEB-INF/jspf/html-head-libs.jspf"%> <!-- Inclui um arquivo JSP que contém bibliotecas JavaScript e CSS comuns -->
 </head>
 <body>
-    <%@include file="/WEB-INF/jspf/navbar.jspf"%>
+    <%@include file="/WEB-INF/jspf/navbar.jspf"%> <!-- Inclui um arquivo JSP que contém a barra de navegação -->
 
     <div class="container my-5">
-        <h1>Lista de Feedbacks</h1>
-        <%
-            List<Feedback> feedbacks = (List<Feedback>) request.getAttribute("feedbacks");
+        <h1>Lista de Feedbacks</h1> <!-- Título da seção -->
+
+        <% 
+            List<Feedback> feedbacks = (List<Feedback>) request.getAttribute("feedbacks"); // Obtém a lista de feedbacks do atributo "feedbacks" da requisição
         %>
-        <ul>
-            <% for (Feedback feedback : feedbacks) { %>
-                <li>
-                    <strong>Nickname:</strong> <%= feedback.getNickname() %><br>
-                    <strong>Comentários:</strong> <%= feedback.getComments() %>
+        
+        <ul> <!-- Inicia uma lista não ordenada -->
+            <% for (Feedback feedback : feedbacks) { %> <!-- Loop sobre cada feedback na lista -->
+                <li> <!-- Item da lista -->
+                    <strong>Nickname:</strong> <%= feedback.getNickname() %><br> <!-- Exibe o nickname do feedback -->
+                    <strong>Comentários:</strong> <%= feedback.getComments() %> <!-- Exibe os comentários do feedback -->
                 </li>
-            <% } %>
-        </ul>
+            <% } %> <!-- Fim do loop -->
+        </ul> <!-- Fim da lista -->
     </div>
 
-    <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%>
+    <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%> <!-- Inclui um arquivo JSP que contém bibliotecas JavaScript e CSS comuns -->
 </body>
 </html>
 

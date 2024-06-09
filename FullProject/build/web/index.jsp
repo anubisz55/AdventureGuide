@@ -35,13 +35,9 @@
         }
         
     </style>
-
-</head>
-<body>
-    <%@include file="WEB-INF/jspf/navbar.jspf"%>
-
-      
-      <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <style>
         html, body {
             height: 96%;
@@ -69,9 +65,37 @@
             line-height: 1.5;
         }
     </style>
-</head>
-<body>
+    
+    
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .list-group-item {
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .list-group-item:hover {
+            background-color: #e3f2fd;
+            color: #000;
+        }
+        .scrollspy-example {
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+    </style>
 
+</head>
+
+
+
+
+<body>
+    <%@include file="WEB-INF/jspf/navbar.jspf"%>
+
+      
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -87,7 +111,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img src="restaurante.png" class="d-block w-100" alt="Restaurante e Lanchonete">
+            <img src="restaurante_1.png" class="d-block w-100" alt="Restaurante e Lanchonete">
             <div class="carousel-caption d-none d-md-block">
                 <h5>Restaurante e Lanchonete</h5>
                 <p>Sabores incríveis que você não pode perder!</p>
@@ -114,28 +138,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
     
     
-    
-    
-    
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .list-group-item {
-            border: 1px solid #ddd;
-            border-radius: 15px;
-            margin-bottom: 10px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .list-group-item:hover {
-            background-color: #e3f2fd;
-            color: #000;
-        }
-        .scrollspy-example {
-            border: 1px solid #ddd;
-            border-radius: 15px;
-            padding: 20px;
-            background-color: #f8f9fa;
-        }
-    </style>
 
 <div class="container mt-4">
     <div class="row">
@@ -151,7 +153,7 @@
                 <h4 id="list-item-1">Sobre o Adventure Guide</h4>
                 <p>Bem-vindo ao Adventure Guide, onde a magia e a diversão de um parque de diversões ganham vida como nunca antes! Explore um mundo de aventuras emocionantes, atrações empolgantes e momentos inesquecíveis para toda a família.</p>
                 <p>Nosso sistema de gerenciamento de filas fornece estimativas precisas do tempo de espera para cada atração. Planeje seu dia com antecedência, evitando surpresas desagradáveis e garantindo que aproveite ao máximo cada minuto de sua visita.</p>
-                <p>O Adventure Guide é seu guia completo para navegar pelo parque. Localize facilmente atrações, restaurantes, lojas e muito mais, com mapas interativos e informações detalhadas.</p>
+                <p>O Adventure Guide é seu guia completo para navegar pelo parque. Localize facilmente atrações, restaurantes, lojas e muito mais, com mapa e informações detalhadas.</p>
                 <p>Após sua visita, compartilhe sua experiência conosco. Avalie as atrações, serviços e desempenho da equipe do parque. Sua opinião é valiosa e nos ajuda a melhorar constantemente.</p>
                 <h4 id="list-item-2">Contato</h4>
                 <p>Telefone para contato: (13)98765-1254</p>
@@ -166,10 +168,10 @@
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
    
-</div>
+<div>
 
 <%@include file="WEB-INF/jspf/html-body-libs.jspf"%>
-
+</div>
 
 </body>
 </html>

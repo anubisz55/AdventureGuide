@@ -21,10 +21,12 @@ public class FeedbackDAO {
         }
     }
 
+    // Construtor que cria o banco de dados e a tabela, se não existirem
     public FeedbackDAO() {
         createDatabaseAndTable();
     }
 
+    // Método privado para criar o banco de dados e a tabela, se não existirem
     private void createDatabaseAndTable() {
         String sql = "CREATE TABLE IF NOT EXISTS feedbacks ("
                 + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -44,6 +46,7 @@ public class FeedbackDAO {
         }
     }
 
+    // Método para adicionar um feedback ao banco de dados
     public void addFeedback(String nickname, String service, String comments) {
         String sql = "INSERT INTO feedbacks(nickname, service, comments) VALUES(?, ?, ?)";
         try (Connection conn = DriverManager.getConnection(DB_URL);
@@ -57,6 +60,7 @@ public class FeedbackDAO {
         }
     }
 
+    // Método para recuperar todos os feedbacks do banco de dados
     public List<Feedback> getFeedbacks() {
         List<Feedback> feedbacks = new ArrayList<>();
         String sql = "SELECT nickname, comments, timestamp FROM feedbacks";

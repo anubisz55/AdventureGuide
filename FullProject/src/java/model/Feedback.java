@@ -7,12 +7,13 @@ package model;
 import java.time.LocalDateTime;
 
 public class Feedback {
-    private int id;
-    private String nickname;
-    private String service;
-    private String comments;
-    private LocalDateTime timestamp;
+    private int id; // Identificador único do feedback
+    private String nickname; // Nickname do usuário que deixou o feedback
+    private String service; // Serviço associado ao feedback
+    private String comments; // Comentários deixados pelo usuário
+    private LocalDateTime timestamp; // Timestamp do feedback (data e hora)
 
+    // Construtor com todos os campos
     public Feedback(int id, String nickname, String service, String comments, LocalDateTime timestamp) {
         this.id = id;
         this.nickname = nickname;
@@ -24,7 +25,7 @@ public class Feedback {
     // Construtor vazio para uso no DAO
     public Feedback() {}
 
-    // Getters e setters
+    // Getters e setters para todos os campos
     public int getId() {
         return id;
     }
