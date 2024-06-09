@@ -51,28 +51,31 @@
     </style>
 </head>
 <body>
-    <%@include file="/WEB-INF/jspf/navbar.jspf"%>
+    <%@include file="/WEB-INF/jspf/navbar.jspf"%> <!-- Inclui o arquivo navbar.jspf para exibir a barra de navegação -->
 
-    <div class="container my-5">
-        <h1>Bate-Bate</h1>
-        <p>Prepare-se para uma experiência de impacto com o Bate-Bate Uma atração emocionante que garante risadas e adrenalina para todas as idades.</p>
-        <p>Bate e divirta-se em um passeio cheio de emoção e alegria. O Bate-Bate é uma experiência imperdível no parque!</p>
-        <img src="bate-bate.png" alt="Bate-Bate" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
-        <h2>Informações Importantes</h2>
-        <ul>
-            <li>Capacidade: 2 pessoas por bate</li>
-            <li>Restrições: Altura mínima de 1 metro</li>
-            <li>Emocionante e divertida para toda a família</li>
-        </ul>
-    </div>
-    <div class="container my-5">
-        <p>Divirta-se no emocionante Bate-Bate do parque!</p>
+    <div class="container my-5"> <!-- Define uma div container com margem superior e inferior de 5 unidades -->
+        <h1>Bate-Bate</h1> <!-- Título principal da seção, descrevendo a atração Bate-Bate -->
+        <p>Prepare-se para uma experiência de impacto com o Bate-Bate. Uma atração emocionante que garante risadas e adrenalina para todas as idades.</p> <!-- Parágrafo informativo sobre a atração Bate-Bate -->
+        <p>Bata e divirta-se em um passeio cheio de emoção e alegria. O Bate-Bate é uma experiência imperdível no parque!</p> <!-- Parágrafo incentivando os visitantes a experimentarem a atração Bate-Bate -->
+        <img src="bate-bate.png" alt="Bate-Bate" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;"> <!-- Imagem da atração Bate-Bate com estilo aplicado -->
+        <h2>Informações Importantes</h2> <!-- Título secundário para seção de informações importantes -->
+        <ul> <!-- Inicia uma lista não ordenada para listar as informações importantes -->
+            <li>Capacidade: 2 pessoas por bate</li> <!-- Item da lista indicando a capacidade do Bate-Bate -->
+            <li>Restrições: Altura mínima de 1 metro</li> <!-- Item da lista indicando as restrições de altura para participação no Bate-Bate -->
+            <li>Emocionante e divertida para toda a família</li> <!-- Item da lista indicando que a atração é emocionante e divertida para toda a família -->
+        </ul> <!-- Fim da lista -->
+    </div> <!-- Fim da primeira div container -->
 
-        <form action="ControleFilaServlet" method="post">
-            <input type="hidden" name="action" value="medirTempoEspera">
-            <button type="submit" class="btn btn-primary">Irei Esperar na Fila</button>
+    <div class="container my-5"> <!-- Define outra div container com margem superior e inferior de 5 unidades -->
+        <p>Divirta-se no emocionante Bate-Bate do parque!</p> <!-- Parágrafo convidando os visitantes a se divertirem na atração Bate-Bate -->
+
+        <form action="ControleFilaServlet" method="post"> <!-- Formulário para medir o tempo de espera na fila -->
+            <input type="hidden" name="action" value="medirTempoEspera"> <!-- Campo oculto para definir a ação do formulário -->
+            <button type="submit" class="btn btn-primary">Irei Esperar na Fila</button> <!-- Botão para enviar o formulário e indicar que o visitante irá esperar na fila -->
         </form>
-    </div>
-    <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%>
+    </div> <!-- Fim da segunda div container -->
+
+    <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%> <!-- Inclui o arquivo html-body-libs.jspf para bibliotecas JavaScript e CSS no final do corpo da página -->
 </body>
+
 </html>

@@ -51,21 +51,22 @@
     </style>
 </head>
 <body>
-    <%@include file="/WEB-INF/jspf/navbar.jspf"%>
+    <%@include file="/WEB-INF/jspf/navbar.jspf"%> <!-- Inclui o arquivo navbar.jspf -->
 
-    <div class="container my-5">
-        <h1>Banheiros (WC 1 - Próximo a Roda Gigante)</h1>
-        <p>O parque conta com banheiros limpos e bem conservados, localizados em pontos estratégicos para sua conveniência.</p>
-        <p>Fique à vontade para utilizar os banheiros sempre que necessário durante sua visita.</p>
-        <img src="banheiro1.png" alt="Banheiro 1" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;">
-        <h2>Informações Importantes</h2>
-        <ul>
-            <li>Banheiros masculinos e femininos disponíveis</li>
-            <li>Banheiros adaptados para pessoas com deficiência</li>
-            <li>Limpeza regular durante todo o horário de funcionamento</li>
-        </ul>
+    <div class="container my-5"> <!-- Define uma div container com margem superior e inferior -->
+        <h1>Banheiros (WC 1 - Próximo a Roda Gigante)</h1> <!-- Título principal da seção -->
+        <p>O parque conta com banheiros limpos e bem conservados, localizados em pontos estratégicos para sua conveniência.</p> <!-- Parágrafo de introdução -->
+        <p>Fique à vontade para utilizar os banheiros sempre que necessário durante sua visita.</p> <!-- Parágrafo informativo -->
+        <img src="banheiro1.png" alt="Banheiro 1" class="img-fluid my-4" style="border-radius: 15px; border: 2px solid #ccc;"> <!-- Imagem do banheiro com estilo aplicado -->
+        <h2>Informações Importantes</h2> <!-- Título secundário -->
+        <ul> <!-- Inicia uma lista não ordenada -->
+            <li>Banheiros masculinos e femininos disponíveis</li> <!-- Item da lista -->
+            <li>Banheiros adaptados para pessoas com deficiência</li> <!-- Item da lista -->
+            <li>Limpeza regular durante todo o horário de funcionamento</li> <!-- Item da lista -->
+        </ul> <!-- Fim da lista -->
     </div>
 
-    <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%>
+    <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%> <!-- Inclui o arquivo html-body-libs.jspf -->
 </body>
+
 </html>

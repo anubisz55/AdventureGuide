@@ -1,15 +1,24 @@
+<!-- Navbar principal com classe bootstrap para expandir em telas grandes e cor de fundo definida -->
 <nav class="navbar navbar-expand-lg" style="background-color: #3E7AC3;">
+  <!-- Container fluido para conteúdo flexível que se expande -->
   <div class="container-fluid">
+    <!-- Link de marca que redireciona para a página index.jsp -->
     <a class="navbar-brand" href="index.jsp">AdventureGuide</a>
+    <!-- Botão para alternar a navbar em telas pequenas -->
     <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon bg-dark"></span>
     </button>
+    <!-- Seção colapsável da navbar -->
     <div class="collapse navbar-collapse" id="navbarScroll">
+      <!-- Lista de navegação com classes bootstrap e estilo de rolagem personalizado -->
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <!-- Item de navegação dropdown para "Atrações" -->
         <li class="nav-item dropdown">
+          <!-- Link dropdown para "Atrações" -->
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Atrações
           </a>
+          <!-- Menu dropdown contendo links para várias atrações -->
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="big-tower.jsp">1 - Big Tower</a></li>
             <li><a class="dropdown-item" href="tirolesa.jsp">2 - Tirolesa</a></li>
@@ -28,10 +37,13 @@
             <li><a class="dropdown-item" href="roda-gigante.jsp">15 - Roda Gigante</a></li>
           </ul>
         </li>
+        <!-- Item de navegação dropdown para "Serviços" -->
         <li class="nav-item dropdown">
+          <!-- Link dropdown para "Serviços" -->
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Serviços
           </a>
+          <!-- Menu dropdown contendo links para vários serviços -->
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="banheiros.jsp">1 - Banheiros (WC 1)</a></li>
             <li><a class="dropdown-item" href="banheiros2.jsp">2 - Banheiros (WC2)</a></li>
@@ -46,26 +58,34 @@
             <li><a class="dropdown-item" href="sorveteria.jsp">11 - Sorveteria</a></li>
           </ul>
         </li>
+        <!-- Item de navegação dropdown para "Mapa da Aventura" -->
         <li class="nav-item dropdown">
+          <!-- Link dropdown para "Mapa da Aventura" -->
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Mapa da Aventura
           </a>
+          <!-- Menu dropdown contendo link para abrir o mapa -->
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="mapa.jsp"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-map" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.5.5 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103M10 1.91l-4-.8v12.98l4 .8zm1 12.98 4-.8V1.11l-4 .8v12.98z"/>
-            </svg>  Abrir</a></li>
+            <li><a class="dropdown-item" href="mapa.jsp">
+              <!-- Ícone de mapa do Bootstrap -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-map" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.5.5 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103M10 1.91l-4-.8v12.98l4 .8zm1 12.98 4-.8V1.11l-4 .8v12.98z"/>
+              </svg>
+              Abrir
+            </a></li>
           </ul>
         </li>
         
+        <!-- Item de navegação simples para "Ver Feedbacks" -->
         <li class="nav-item">
           <a class="nav-link" href="ControleFilaServlet?action=listarFeedbacks">Ver Feedbacks</a>
         </li>
-        
         
       </ul>
     </div>
   </div>
 </nav>
+
       
       
 

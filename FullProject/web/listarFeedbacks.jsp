@@ -16,6 +16,7 @@
     <title>Lista de Feedbacks</title> <!-- Define o título da página -->
     <%@include file="/WEB-INF/jspf/html-head-libs.jspf"%> <!-- Inclui um arquivo JSP que contém bibliotecas JavaScript e CSS comuns -->
 </head>
+</head>
 <body>
     <%@include file="/WEB-INF/jspf/navbar.jspf"%> <!-- Inclui um arquivo JSP que contém a barra de navegação -->
 
@@ -26,11 +27,21 @@
             List<Feedback> feedbacks = (List<Feedback>) request.getAttribute("feedbacks"); // Obtém a lista de feedbacks do atributo "feedbacks" da requisição
         %>
         
-        <ul> <!-- Inicia uma lista não ordenada -->
+        <!-- Inicia uma lista não ordenada e inclui estilos -->
+        <ul style=" 
+            list-style-type: none; /* Remove o estilo de marcadores da lista */
+            padding: 0; /* Remove o espaçamento interno padrão da lista */
+        ">
             <% for (Feedback feedback : feedbacks) { %> <!-- Loop sobre cada feedback na lista -->
-                <li> <!-- Item da lista -->
-                    <strong>Nickname:</strong> <%= feedback.getNickname() %><br> <!-- Exibe o nickname do feedback -->
-                    <strong>Comentários:</strong> <%= feedback.getComments() %> <!-- Exibe os comentários do feedback -->
+                <li style="
+                    background: #f9f9f9; /* Fundo claro para itens da lista */
+                    border: 1px solid #ddd; /* Borda cinza clara */
+                    border-radius: 5px; /* Bordas arredondadas */
+                    padding: 10px; /* Espaçamento interno */
+                    margin-bottom: 10px; /* Espaçamento entre itens */
+                ">
+                    <strong style="color: #007bff;">Nickname:</strong> <%= feedback.getNickname() %><br> <!-- Exibe o nickname do feedback -->
+                    <strong style="color: #007bff;">Comentários:</strong> <%= feedback.getComments() %> <!-- Exibe os comentários do feedback -->
                 </li>
             <% } %> <!-- Fim do loop -->
         </ul> <!-- Fim da lista -->
