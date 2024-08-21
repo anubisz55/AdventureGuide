@@ -1,9 +1,5 @@
 # AdventureGuide
-Projeto Semestral de Programação Orientada a Objetos - ADS
-App do parque de diversões
-Integrantes:
-Ariadne Saraiva dos Santos
-Nubia Abreu de Oliveira
+O Adventure Guide é uma plataforma online com informações essenciais do parque, oferecendo funcionalidades para visitantes e equipe, garantindo uma experiência personalizada.
 
 Página Inicial:
 ![página-inicial](https://github.com/anubisz55/AdventureGuide/assets/151870080/5b46c128-c55d-473a-8ee9-a063582d4094)
