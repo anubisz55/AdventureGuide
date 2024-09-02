@@ -7,6 +7,7 @@ package servlets;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
 import java.util.Random;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.ControleFilaEspera;
+import model.Feedback;
 import model.FeedbackDAO;
 
 @WebServlet(name = "ControleFilaServlet", urlPatterns = {"/ControleFilaServlet"})
@@ -76,21 +78,30 @@ public class ControleFilaServlet extends HttpServlet {
         return "Controle da Fila de Espera";
     }
 
+ 
+    
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        // Obtém a ação do parâmetro da requisição
-        String action = request.getParameter("action");
+protected void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+    String action = request.getParameter("action");
 
-        // Se a ação for "listarFeedbacks", obtém os feedbacks do DAO e encaminha para a página de listagem de feedbacks
-        if ("listarFeedbacks".equals(action)) {
-            FeedbackDAO feedbackDAO = (FeedbackDAO) getServletContext().getAttribute("feedbackDAO");
-            request.setAttribute("feedbacks", feedbackDAO.getFeedbacks());
-            request.getRequestDispatcher("listarFeedbacks.jsp").forward(request, response);
-            return;
+    if ("listarFeedbacks".equals(action)) {
+        FeedbackDAO feedbackDAO = (FeedbackDAO) getServletContext().getAttribute("feedbackDAO");
+        String attraction = request.getParameter("attraction");  // Obter a atração do parâmetro da solicitação
+        List<Feedback> feedbacks;
+        
+        if (attraction == null || attraction.isEmpty()) {
+            feedbacks = feedbackDAO.getFeedbacks();  // Sem filtro, obtém todos os feedbacks
+        } else {
+            feedbacks = feedbackDAO.getFeedbacksByAttraction(attraction);  // Obtém feedbacks da atração específica
         }
-
-        // Redireciona para a página principal do controle da fila
-        response.sendRedirect("ControleFilaEspera.jsp");
+        
+        request.setAttribute("feedbacks", feedbacks);
+        request.getRequestDispatcher("listarFeedbacks.jsp").forward(request, response);
+        return;
     }
+
+    response.sendRedirect("ControleFilaEspera.jsp");
+}
+
 }

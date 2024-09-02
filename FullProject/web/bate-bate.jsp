@@ -71,7 +71,7 @@
 
         <form action="ControleFilaServlet" method="post"> <!-- Formulário para medir o tempo de espera na fila -->
             <input type="hidden" name="action" value="medirTempoEspera"> <!-- Campo oculto para definir a ação do formulário -->
-            <button type="submit" class="btn btn-primary">Irei Esperar na Fila</button> <!-- Botão para enviar o formulário e indicar que o visitante irá esperar na fila -->
+            <button type="submit" class="btn btn-primary">Ver Tempo de Espera</button> <!-- Botão para enviar o formulário e indicar o tempo de espera -->
         </form>
     </div> <!-- Fim da segunda div container -->
 

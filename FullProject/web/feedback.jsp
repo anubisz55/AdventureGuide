@@ -83,7 +83,19 @@
         <h2>Deixe seu Feedback</h2> <!-- Título do formulário -->
         <form action="ControleFilaServlet" method="post"> <!-- Formulário para enviar feedback -->
             <input type="hidden" name="action" value="adicionarFeedback"> <!-- Campo oculto para definir a ação -->
-            <input type="hidden" name="service" value="Carrossel"> <!-- Campo oculto para definir o serviço -->
+            
+            <!-- Adiciona um select para escolher a atração -->
+            <div class="form-group"> <!-- Grupo de formulário para o campo de atração -->
+                <label for="service">Escolha a Atração:</label> <!-- Rótulo para o campo de seleção da atração -->
+                <select class="form-control" id="service" name="service" required> <!-- Lista de seleção para escolher a atração -->
+                    <option value="Carrossel">Carrossel</option>
+                    <option value="Montanha Russa">Montanha Russa</option>
+                    <option value="Roda Gigante">Roda Gigante</option>
+                    <option value="Casa Assombrada">Casa Assombrada</option>
+                    <!-- Adicione outras opções de atrações conforme necessário -->
+                </select>
+            </div>
+
             <div class="form-group"> <!-- Grupo de formulário para o campo de nickname -->
                 <label for="nickname">Nickname:</label> <!-- Rótulo para o campo de nickname -->
                 <input type="text" class="form-control" id="nickname" name="nickname" required> <!-- Campo de entrada para o nickname -->

@@ -79,4 +79,40 @@ public class FeedbackDAO {
         }
         return feedbacks;
     }
+    
+    
+    
+    
+    
+   
+public List<Feedback> getFeedbacksByAttraction(String attraction) {
+    List<Feedback> feedbacks = new ArrayList<>();
+    String sql = "SELECT nickname, service, comments, timestamp FROM feedbacks";
+    if (attraction != null && !attraction.isEmpty()) {
+        sql += " WHERE service = ?";
+    }
+
+    try (Connection conn = DriverManager.getConnection(DB_URL);
+         PreparedStatement pstmt = conn.prepareStatement(sql)) {
+        
+        if (attraction != null && !attraction.isEmpty()) {
+            pstmt.setString(1, attraction);
+        }
+        
+        try (ResultSet rs = pstmt.executeQuery()) {
+            while (rs.next()) {
+                Feedback feedback = new Feedback();
+                feedback.setNickname(rs.getString("nickname"));
+                feedback.setService(rs.getString("service"));
+                feedback.setComments(rs.getString("comments"));
+                feedback.setTimestamp(rs.getTimestamp("timestamp").toLocalDateTime());
+                feedbacks.add(feedback);
+            }
+        }
+    } catch (SQLException e) {
+        System.err.println("Erro ao obter feedbacks: " + e.getMessage());
+    }
+    return feedbacks;
+}
+
 }

@@ -76,7 +76,7 @@
 
         <form action="ControleFilaServlet" method="post">
             <input type="hidden" name="action" value="medirTempoEspera">
-            <button type="submit" class="btn btn-primary">Irei Esperar na Fila</button>
+            <button type="submit" class="btn btn-primary">Ver Tempo de Espera</button>
         </form>
     </div>
 

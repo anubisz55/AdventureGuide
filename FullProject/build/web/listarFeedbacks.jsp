@@ -4,50 +4,57 @@
     Author     : ariad
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%> <!-- Define o tipo de conteúdo e a codificação da página -->
-
-<%@ page import="java.util.List" %> <!-- Importa a classe List do pacote java.util -->
-<%@ page import="model.Feedback" %> <!-- Importa a classe Feedback do pacote model -->
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="java.util.List" %>
+<%@ page import="model.Feedback" %>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8"> <!-- Define a codificação da página -->
-    <title>Lista de Feedbacks</title> <!-- Define o título da página -->
-    <%@include file="/WEB-INF/jspf/html-head-libs.jspf"%> <!-- Inclui um arquivo JSP que contém bibliotecas JavaScript e CSS comuns -->
-</head>
+    <meta charset="UTF-8">
+    <title>Lista de Feedbacks</title>
+    <%@include file="/WEB-INF/jspf/html-head-libs.jspf"%>
 </head>
 <body>
-    <%@include file="/WEB-INF/jspf/navbar.jspf"%> <!-- Inclui um arquivo JSP que contém a barra de navegação -->
+    <%@include file="/WEB-INF/jspf/navbar.jspf"%>
 
     <div class="container my-5">
-        <h1>Lista de Feedbacks</h1> <!-- Título da seção -->
+        <h1>Lista de Feedbacks</h1>
 
-        <% 
-            List<Feedback> feedbacks = (List<Feedback>) request.getAttribute("feedbacks"); // Obtém a lista de feedbacks do atributo "feedbacks" da requisição
+        <!-- Formulário para filtrar feedbacks por atração -->
+        <form action="ControleFilaServlet" method="get">
+            <input type="hidden" name="action" value="listarFeedbacks">
+            <div class="form-group">
+                <label for="attraction">Escolha uma atração:</label>
+                <select name="attraction" id="attraction" class="form-control">
+                    <option value="">Todas</option>
+                    <option value="Carrossel">Carrossel</option>
+                    <option value="Montanha Russa">Montanha Russa</option>
+                    <!-- Adicione outras opções conforme necessário -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Filtrar</button>
+        </form>
+
+        <%
+            List<Feedback> feedbacks = (List<Feedback>) request.getAttribute("feedbacks");
+            if (feedbacks != null && !feedbacks.isEmpty()) {
         %>
-        
-        <!-- Inicia uma lista não ordenada e inclui estilos -->
-        <ul style=" 
-            list-style-type: none; /* Remove o estilo de marcadores da lista */
-            padding: 0; /* Remove o espaçamento interno padrão da lista */
-        ">
-            <% for (Feedback feedback : feedbacks) { %> <!-- Loop sobre cada feedback na lista -->
-                <li style="
-                    background: #f9f9f9; /* Fundo claro para itens da lista */
-                    border: 1px solid #ddd; /* Borda cinza clara */
-                    border-radius: 5px; /* Bordas arredondadas */
-                    padding: 10px; /* Espaçamento interno */
-                    margin-bottom: 10px; /* Espaçamento entre itens */
-                ">
-                    <strong style="color: #007bff;">Nickname:</strong> <%= feedback.getNickname() %><br> <!-- Exibe o nickname do feedback -->
-                    <strong style="color: #007bff;">Comentários:</strong> <%= feedback.getComments() %> <!-- Exibe os comentários do feedback -->
-                </li>
-            <% } %> <!-- Fim do loop -->
-        </ul> <!-- Fim da lista -->
+            <ul>
+                <% for (Feedback feedback : feedbacks) { %>
+                    <li>
+                        <strong>Atração:</strong> <%= feedback.getService() %><br>
+                        <strong>Nickname:</strong> <%= feedback.getNickname() %><br>
+                        <strong>Comentários:</strong> <%= feedback.getComments() %>
+                    </li>
+                <% } %>
+            </ul>
+        <% } else { %>
+            <p>Nenhum feedback encontrado para a atração selecionada.</p>
+        <% } %>
     </div>
 
-    <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%> <!-- Inclui um arquivo JSP que contém bibliotecas JavaScript e CSS comuns -->
+    <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%>
 </body>
 </html>
 
