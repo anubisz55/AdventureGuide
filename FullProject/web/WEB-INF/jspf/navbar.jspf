@@ -76,15 +76,18 @@
           </ul>
         </li>
         
-        <!-- Item de navegação simples para "Ver Feedbacks" -->
-        <li class="nav-item">
-          <a class="nav-link" href="ControleFilaServlet?action=listarFeedbacks">Ver Feedbacks</a>
-        </li>
+       <!-- Item de navegação simples para "Ver Feedbacks" -->
+<li class="nav-item">
+  <a class="nav-link" href="ControleFilaServlet?action=listarFeedbacks">Ver Feedbacks</a>
+</li>
+
+<!-- Item de navegação simples para "Administrador" -->
+<li class="nav-item">
+  <a class="nav-link" href="adminLogin.jsp">Administrador</a>
+</li>
+
         
-        
-              
-       
-              
+            
         
         
       </ul>
@@ -92,15 +95,6 @@
   </div>
 </nav>
 
-      
-      
-
-      
-      
-      
-      
-      
-      
       
       
       
