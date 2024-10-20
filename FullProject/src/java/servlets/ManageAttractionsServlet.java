@@ -8,14 +8,20 @@ import model.Attraction;
 import model.AttractionDAO;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
 @WebServlet("/ManageAttractionsServlet")
+@MultipartConfig(fileSizeThreshold = 1024 * 1024 * 2, // 2MB
+                 maxFileSize = 1024 * 1024 * 10,      // 10MB
+                 maxRequestSize = 1024 * 1024 * 50)   // 50MB
 public class ManageAttractionsServlet extends HttpServlet {
     private AttractionDAO attractionDAO;
 
@@ -45,11 +51,13 @@ public class ManageAttractionsServlet extends HttpServlet {
         }
     }
 
-    private void listAttractions(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Attraction> attractions = attractionDAO.getAllAttractions();
-        request.setAttribute("attractions", attractions);
-        request.getRequestDispatcher("attraction-list.jsp").forward(request, response);
-    }
+   private void listAttractions(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    List<Attraction> attractions = attractionDAO.getAllAttractions();
+    System.out.println("Atrações carregadas: " + attractions.size()); // Debug
+    request.setAttribute("attractions", attractions);
+    request.getRequestDispatcher("attraction-list.jsp").forward(request, response);
+}
+
 
     private void showNewForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("attraction-form.jsp").forward(request, response);
@@ -72,20 +80,35 @@ public class ManageAttractionsServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String id = request.getParameter("id");
-        String name = request.getParameter("name");
-        String description = request.getParameter("description");
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    String id = request.getParameter("id");
+    String name = request.getParameter("name");
+    String description = request.getParameter("description");
+    String imagePath = request.getParameter("imagePath"); // Novo campo imagem
+    String coordinates = request.getParameter("coordinates"); // Novo campo coordenadas
 
-        if (id == null || id.isEmpty()) {
-            // Novo registro
-            Attraction newAttraction = new Attraction(0, name, description);
-            attractionDAO.addAttraction(newAttraction);
-        } else {
-            // Atualizar registro existente
-            Attraction updatedAttraction = new Attraction(Integer.parseInt(id), name, description);
-            attractionDAO.updateAttraction(updatedAttraction);
+    if (id == null || id.isEmpty()) {
+        // Novo registro
+        Attraction newAttraction = new Attraction(0, name, description, imagePath, coordinates);
+        attractionDAO.addAttraction(newAttraction);
+    } else {
+        // Atualizar registro existente
+        Attraction updatedAttraction = new Attraction(Integer.parseInt(id), name, description, imagePath, coordinates);
+        attractionDAO.updateAttraction(updatedAttraction);
+    }
+    response.sendRedirect("ManageAttractionsServlet");
+}
+
+
+    // Método auxiliar para extrair o nome do arquivo enviado
+    private String extractFileName(Part part) {
+        String contentDisposition = part.getHeader("content-disposition");
+        String[] items = contentDisposition.split(";");
+        for (String item : items) {
+            if (item.trim().startsWith("filename")) {
+                return item.substring(item.indexOf("=") + 2, item.length() - 1);
+            }
         }
-        response.sendRedirect("ManageAttractionsServlet");
+        return "";
     }
 }

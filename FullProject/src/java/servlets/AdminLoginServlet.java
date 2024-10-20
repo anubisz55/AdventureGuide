@@ -30,7 +30,7 @@ public class AdminLoginServlet extends HttpServlet {
             // Se a senha estiver correta, cria uma sessão e define um atributo "isAdmin"
             HttpSession session = request.getSession();
             session.setAttribute("isAdmin", true);
-            response.sendRedirect("adminHome.jsp");  // Redireciona para a página do administrador
+            response.sendRedirect("ManageAttractionsServlet");  // Redireciona para Manage que acessa a lista de atrações
         } else {
             // Se a senha estiver incorreta, redireciona para a página de login novamente
             response.sendRedirect("adminLogin.jsp?error=1");

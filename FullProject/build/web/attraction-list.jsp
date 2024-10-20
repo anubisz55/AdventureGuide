@@ -10,6 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Lista de Atrações</title>
     <%@include file="/WEB-INF/jspf/html-head-libs.jspf"%>
 </head>
@@ -25,6 +26,8 @@
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Descrição</th>
+                    <th>Imagem</th>
+                    <th>Coordenadas</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -37,6 +40,25 @@
                         <td><%= attraction.getId() %></td>
                         <td><%= attraction.getName() %></td>
                         <td><%= attraction.getDescription() %></td>
+
+                        <!-- Exibir a imagem, se existir -->
+                        <td>
+                            <% if (attraction.getImagePath() != null && !attraction.getImagePath().isEmpty()) { %>
+                                <img src="<%= attraction.getImagePath() %>" alt="Imagem da Atração" width="100">
+                            <% } else { %>
+                                <span>Sem imagem</span>
+                            <% } %>
+                        </td>
+
+                        <!-- Exibir as coordenadas -->
+                        <td>
+                            <% if (attraction.getCoordinates() != null && !attraction.getCoordinates().isEmpty()) { %>
+                                <%= attraction.getCoordinates() %>
+                            <% } else { %>
+                                <span>Sem coordenadas</span>
+                            <% } %>
+                        </td>
+
                         <td>
                             <a href="ManageAttractionsServlet?action=edit&id=<%= attraction.getId() %>" class="btn btn-warning">Editar</a>
                             <a href="ManageAttractionsServlet?action=delete&id=<%= attraction.getId() %>" class="btn btn-danger">Excluir</a>
@@ -50,4 +72,3 @@
     <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%>
 </body>
 </html>
-

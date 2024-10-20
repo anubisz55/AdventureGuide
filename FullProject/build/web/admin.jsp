@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Administração</title>
     <%@include file="/WEB-INF/jspf/html-head-libs.jspf"%>
 </head>
@@ -33,6 +33,15 @@
                 <label for="description">Descrição:</label>
                 <textarea class="form-control" id="description" name="description" required></textarea>
             </div>
+            <div class="form-group">
+                <label for="imagePath">Caminho da Imagem (Ex: images/atracao.png):</label>
+                <input type="text" class="form-control" id="imagePath" name="imagePath" required>
+            </div>
+            <div class="form-group">
+                <label for="coordinates">Coordenadas (Ex: 100,200):</label>
+                <input type="text" class="form-control" id="coordinates" name="coordinates" required>
+            </div>
+    
             <button type="submit" class="btn btn-primary">Adicionar</button>
         </form>
 
@@ -61,6 +70,8 @@
         <div>
             <h4><%= attraction.getName() %></h4>
             <p><%= attraction.getDescription() %></p>
+            <p>Coordenadas: <%= attraction.getCoordinates() %></p>
+            <p>Imagem: <img src="<%= attraction.getImagePath() %>" alt="<%= attraction.getName() %>" width="100"></p>
             <form action="AdminServlet" method="post">
                 <input type="hidden" name="action" value="updateAttraction">
                 <input type="hidden" name="id" value="<%= attraction.getId() %>">
@@ -101,4 +112,3 @@
     <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%>
 </body>
 </html>
-

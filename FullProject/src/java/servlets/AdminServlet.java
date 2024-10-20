@@ -36,19 +36,27 @@ public class AdminServlet extends HttpServlet {
         if ("addAttraction".equals(action)) {
             String name = request.getParameter("name");
             String description = request.getParameter("description");
+            String imagePath = request.getParameter("imagePath");
+            String coordinates = request.getParameter("coordinates");
             Attraction attraction = new Attraction();
             attraction.setName(name);
             attraction.setDescription(description);
+            attraction.setImagePath(imagePath);
+            attraction.setCoordinates(coordinates);
             attractionDAO.addAttraction(attraction);
             response.sendRedirect("admin.jsp");
         } else if ("updateAttraction".equals(action)) {
             int id = Integer.parseInt(request.getParameter("id"));
             String name = request.getParameter("name");
             String description = request.getParameter("description");
+            String imagePath = request.getParameter("imagePath");
+            String coordinates = request.getParameter("coordinates");
             Attraction attraction = new Attraction();
             attraction.setId(id);
             attraction.setName(name);
             attraction.setDescription(description);
+            attraction.setImagePath(imagePath);
+            attraction.setCoordinates(coordinates);
             attractionDAO.updateAttraction(attraction);
             response.sendRedirect("admin.jsp");
         } else if ("deleteAttraction".equals(action)) {

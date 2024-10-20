@@ -8,11 +8,17 @@ public class Attraction {
     private int id;
     private String name;
     private String description;
+    private String imagePath;   // Caminho da imagem
+    private String coordinates; // Coordenadas
 
-    public Attraction(int id, String name, String description) {
+
+    public Attraction(int id, String name, String description, String imagePath, String coordinates) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.imagePath = imagePath;
+        this.coordinates = coordinates;
+       
     }
 
     // Construtor vazio para uso no DAO
@@ -42,4 +48,21 @@ public class Attraction {
     public void setDescription(String description) {
         this.description = description;
     }
+    
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
+    public String getCoordinates() {
+        return coordinates;
+    }
+
+    public void setCoordinates(String coordinates) {
+        this.coordinates = coordinates;
+    }
+
 }
