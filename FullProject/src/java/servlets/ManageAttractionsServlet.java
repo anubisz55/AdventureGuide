@@ -81,6 +81,7 @@ public class ManageAttractionsServlet extends HttpServlet {
 
     @Override
 protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    System.out.println("entrou");
     String id = request.getParameter("id");
     String name = request.getParameter("name");
     String description = request.getParameter("description");
@@ -88,6 +89,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
     String coordinates = request.getParameter("coordinates"); // Novo campo coordenadas
 
     if (id == null || id.isEmpty()) {
+        System.out.println("entrou no if");
         // Novo registro
         Attraction newAttraction = new Attraction(0, name, description, imagePath, coordinates);
         attractionDAO.addAttraction(newAttraction);

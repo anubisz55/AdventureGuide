@@ -16,9 +16,8 @@
 </head>
 <body>
     <%@include file="/WEB-INF/jspf/navbar.jspf"%>
-
     <div class="container my-5">
-        <h1>Atrações do Parque</h1>
+        <h1>Atrações do Parques</h1>
         <a href="ManageAttractionsServlet?action=new" class="btn btn-primary">Nova Atração</a>
         <table class="table mt-3">
             <thead>

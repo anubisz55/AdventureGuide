@@ -34,7 +34,7 @@
             <div class="mb-3">
                 <label for="description" class="form-label">Descrição</label>
                 <textarea class="form-control" id="description" name="description" required>
-                    <%= request.getAttribute("attraction") != null ? ((Attraction) request.getAttribute("attraction")).getDescription() : "" %>
+<%= request.getAttribute("attraction") != null ? ((Attraction) request.getAttribute("attraction")).getDescription() : "" %>
                 </textarea>
             </div>
             
@@ -61,4 +61,3 @@
     <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%>
 </body>
 </html>
-

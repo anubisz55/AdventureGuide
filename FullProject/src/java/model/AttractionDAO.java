@@ -4,6 +4,7 @@
  */
 package model;
 
+import java.nio.charset.StandardCharsets;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,11 +43,11 @@ public class AttractionDAO {
 
     // Método para adicionar uma nova atração com imagem e coordenadas
     public void addAttraction(Attraction attraction) {
-    String sql = "INSERT INTO attractions(name, description, imagePath, coordinates) VALUES(?, ?, ?, ?)";
+    String sql = "INSERT INTO attractions(name, description, image_path, coordinates) VALUES(?, ?, ?, ?)";
     try (Connection conn = DriverManager.getConnection(DB_URL);
          PreparedStatement pstmt = conn.prepareStatement(sql)) {
-        pstmt.setString(1, attraction.getName());
-        pstmt.setString(2, attraction.getDescription());
+        pstmt.setString(1, new String(attraction.getName().getBytes(), StandardCharsets.UTF_8));
+        pstmt.setString(2, new String(attraction.getDescription().getBytes(), StandardCharsets.UTF_8));
         pstmt.setString(3, attraction.getImagePath()); // Novo campo imagem
         pstmt.setString(4, attraction.getCoordinates()); // Novo campo coordenadas
         pstmt.executeUpdate();
@@ -59,7 +60,7 @@ public class AttractionDAO {
     // Método para obter todas as atrações, incluindo imagem e coordenadas
     public List<Attraction> getAllAttractions() {
     List<Attraction> attractions = new ArrayList<>();
-    String sql = "SELECT id, name, description, imagePath, coordinates FROM attractions";
+    String sql = "SELECT id, name, description, image_path, coordinates FROM attractions";
     try (Connection conn = DriverManager.getConnection(DB_URL);
          Statement stmt = conn.createStatement();
          ResultSet rs = stmt.executeQuery(sql)) {
@@ -68,7 +69,7 @@ public class AttractionDAO {
             attraction.setId(rs.getInt("id"));
             attraction.setName(rs.getString("name"));
             attraction.setDescription(rs.getString("description"));
-            attraction.setImagePath(rs.getString("imagePath")); // Novo campo imagem
+            attraction.setImagePath(rs.getString("image_path")); // Novo campo imagem
             attraction.setCoordinates(rs.getString("coordinates")); // Novo campo coordenadas
             attractions.add(attraction);
         }
@@ -122,7 +123,7 @@ public class AttractionDAO {
             int attractionId = rs.getInt("id");
             String name = rs.getString("name");
             String description = rs.getString("description");
-            String imagePath = rs.getString("imagePath");
+            String imagePath = rs.getString("image_path");
             String coordinates = rs.getString("coordinates");
 
             // Cria um objeto Attraction com os dados recuperados
