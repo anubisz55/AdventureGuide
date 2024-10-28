@@ -135,9 +135,9 @@ public class AttractionDAO {
     return attraction;
 }
 
-    private Connection connect() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    private Connection connect() throws SQLException {
+    return DriverManager.getConnection(DB_URL);
+}
 
 }
 

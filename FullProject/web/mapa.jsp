@@ -23,11 +23,14 @@
         /* Ícones posicionados no mapa */
         .map-icon {
             position: absolute;
-            width: 30px;
-            height: 30px;
-            background: url('icon.png') no-repeat center center;
-            background-size: cover;
-            cursor: pointer;
+        width: 20px; /* Defina o tamanho da bolinha */
+        height: 20px;
+        background-color: red; /* Cor vermelha */
+        border-radius: 50%; /* Torna o ícone circular */
+        cursor: pointer;
+        border: 2px solid white; /* Adiciona uma borda branca */
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+            
         }
 
         /* Estilo do botão Voltar */
@@ -51,7 +54,7 @@
 <body>
     <div class="map-container">
         <!-- Imagem do mapa -->
-        <img src="mapa.png" alt="Mapa do Parque" style="width: 100%; height: auto;">
+        <img src="mapa.png" alt="Mapa do Parque" style="width: 150%; height: auto;">
 
         <%
             // Busca as atrações do banco de dados
