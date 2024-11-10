@@ -85,8 +85,8 @@ public class AttractionDAO {
         String sql = "UPDATE attractions SET name = ?, description = ?, image_path = ?, coordinates = ? WHERE id = ?";
         try (Connection conn = DriverManager.getConnection(DB_URL);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, attraction.getName());
-            pstmt.setString(2, attraction.getDescription());
+            pstmt.setString(1, new String(attraction.getName().getBytes(), StandardCharsets.UTF_8));
+            pstmt.setString(2, new String(attraction.getDescription().getBytes(), StandardCharsets.UTF_8));
             pstmt.setString(3, attraction.getImagePath());   // Atualiza o caminho da imagem
             pstmt.setString(4, attraction.getCoordinates()); // Atualiza as coordenadas
             pstmt.setInt(5, attraction.getId());
@@ -140,4 +140,3 @@ public class AttractionDAO {
 }
 
 }
-
