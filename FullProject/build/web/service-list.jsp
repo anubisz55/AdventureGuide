@@ -25,6 +25,8 @@
                     <th>ID</th> <!-- Cabeçalho da coluna ID -->
                     <th>Nome</th> <!-- Cabeçalho da coluna Nome -->
                     <th>Descrição</th> <!-- Cabeçalho da coluna Descrição -->
+                    <th>Imagem</th> <!-- Cabeçalho da coluna Imagem -->
+                    <th>Coordenadas</th> <!-- Cabeçalho da coluna Coordenadas -->
                     <th>Ações</th> <!-- Cabeçalho da coluna Ações -->
                 </tr>
             </thead>
@@ -37,6 +39,25 @@
                         <td><%= service.getId() %></td> <!-- Exibe o ID do serviço -->
                         <td><%= service.getName() %></td> <!-- Exibe o nome do serviço -->
                         <td><%= service.getDescription() %></td> <!-- Exibe a descrição do serviço -->
+
+                        <!-- Exibe a imagem do serviço se houver -->
+                        <td>
+                            <% if (service.getImagePath() != null && !service.getImagePath().isEmpty()) { %>
+                                <img src="<%= service.getImagePath() %>" alt="Imagem do serviço" style="width: 100px; height: auto;"/>
+                            <% } else { %>
+                                <span>Sem imagem</span>
+                            <% } %>
+                        </td>
+
+                        <!-- Exibe as coordenadas do serviço se houver -->
+                        <td>
+                            <% if (service.getCoordinates() != null && !service.getCoordinates().isEmpty()) { %>
+                                <span><%= service.getCoordinates() %></span>
+                            <% } else { %>
+                                <span>Sem coordenadas</span>
+                            <% } %>
+                        </td>
+
                         <td>
                             <a href="ManageServicesServlet?action=edit&id=<%= service.getId() %>" class="btn btn-warning">Editar</a> <!-- Link para editar o serviço -->
                             <a href="ManageServicesServlet?action=delete&id=<%= service.getId() %>" class="btn btn-danger">Excluir</a> <!-- Link para excluir o serviço -->
@@ -46,8 +67,7 @@
             </tbody>
         </table>
     </div>
-    
+
     <%@include file="/WEB-INF/jspf/html-body-libs.jspf"%> <!-- Inclui os arquivos de scripts no final do corpo da página -->
 </body>
 </html>
-

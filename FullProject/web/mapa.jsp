@@ -8,10 +8,12 @@
 <%@page import="java.util.List"%>
 <%@page import="model.Attraction"%>
 <%@page import="model.AttractionDAO"%>
+<%@page import="model.Service"%>
+<%@page import="model.ServiceDAO"%>
 <!DOCTYPE html>
 <html>
 <head>
-     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Mapa do Parque</title>
     <style>
         /* Estilo para o mapa */
@@ -23,14 +25,24 @@
         /* Ícones posicionados no mapa */
         .map-icon {
             position: absolute;
-        width: 20px; /* Defina o tamanho da bolinha */
-        height: 20px;
-        background-color: red; /* Cor vermelha */
-        border-radius: 50%; /* Torna o ícone circular */
-        cursor: pointer;
-        border: 2px solid white; /* Adiciona uma borda branca */
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
-            
+            width: 20px; /* Tamanho do ícone de atração */
+            height: 20px;
+            background-color: red; /* Cor vermelha */
+            border-radius: 50%; /* Torna o ícone circular */
+            cursor: pointer;
+            border: 2px solid white; /* Adiciona uma borda branca */
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+        }
+
+        .service-icon {
+            position: absolute;
+            width: 20px; /* Tamanho do ícone de serviço */
+            height: 20px;
+            background-color: #28a745; /* Cor verde claro */
+            border-radius: 50%; /* Torna o ícone circular */
+            cursor: pointer;
+            border: 2px solid white; /* Adiciona uma borda branca */
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
         }
 
         /* Estilo do botão Voltar */
@@ -61,7 +73,7 @@
             AttractionDAO attractionDAO = new AttractionDAO();
             List<Attraction> attractions = attractionDAO.getAllAttractions();
 
-            // Renderiza os ícones com base nas coordenadas
+            // Renderiza os ícones de atrações
             for (Attraction attraction : attractions) {
                 String[] coords = attraction.getCoordinates().split(","); // Exemplo: "100,200"
         %>
@@ -73,10 +85,27 @@
                 </a>
         <%
             }
+
+            // Busca os serviços do banco de dados
+            ServiceDAO serviceDAO = new ServiceDAO();
+            List<Service> services = serviceDAO.getAllServices();
+
+            // Renderiza os ícones de serviços
+            for (Service service : services) {
+                String[] coords = service.getCoordinates().split(","); // Exemplo: "100,200"
+        %>
+                <!-- Ícone clicável do serviço -->
+                <a href="service-details.jsp?id=<%= service.getId() %>" 
+                   class="service-icon" 
+                   style="top: <%= coords[1] %>px; left: <%= coords[0] %>px;" 
+                   title="<%= service.getName() %>">
+                </a>
+        <%
+            }
         %>
     </div>
 
-    <!-- Botão Voltar -->
-    <a href="index.jsp" class="btn-voltar">Voltar</a>
+    <!-- Botão Voltar ao Mapa -->
+     <a href="index.jsp" class="btn-voltar">Voltar</a>
 </body>
 </html>

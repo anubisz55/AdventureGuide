@@ -10,15 +10,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Lista de Atrações</title>
     <%@include file="/WEB-INF/jspf/html-head-libs.jspf"%>
 </head>
 <body>
     <%@include file="/WEB-INF/jspf/navbar.jspf"%>
     <div class="container my-5">
-        <h1>Atrações do Parques</h1>
+        <h1>Atrações do Parque</h1>
+        <!-- Botões "Nova Atração" e "Novo Serviço" -->
         <a href="ManageAttractionsServlet?action=new" class="btn btn-primary">Nova Atração</a>
+        <a href="ManageServicesServlet?action=new" class="btn btn-primary" style="margin-left: 10px;">Novo Serviço</a> <!-- Novo botão para Serviço -->
+        
         <table class="table mt-3">
             <thead>
                 <tr>

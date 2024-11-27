@@ -33,58 +33,82 @@ public class AdminServlet extends HttpServlet {
             throws ServletException, IOException {
         String action = request.getParameter("action");
 
+        // Gerenciamento de Atrações
         if ("addAttraction".equals(action)) {
             String name = request.getParameter("name");
             String description = request.getParameter("description");
             String imagePath = request.getParameter("imagePath");
             String coordinates = request.getParameter("coordinates");
+
+            // Criação da atração com os dados recebidos
             Attraction attraction = new Attraction();
             attraction.setName(name);
             attraction.setDescription(description);
-            attraction.setImagePath(imagePath);
-            attraction.setCoordinates(coordinates);
-            attractionDAO.addAttraction(attraction);
-            response.sendRedirect("admin.jsp");
+            attraction.setImagePath(imagePath);  // Novo campo de imagem
+            attraction.setCoordinates(coordinates);  // Novo campo de coordenadas
+
+            attractionDAO.addAttraction(attraction);  // Adiciona a atração no banco
+            response.sendRedirect("admin.jsp");  // Redireciona para a página admin.jsp
         } else if ("updateAttraction".equals(action)) {
             int id = Integer.parseInt(request.getParameter("id"));
             String name = request.getParameter("name");
             String description = request.getParameter("description");
             String imagePath = request.getParameter("imagePath");
             String coordinates = request.getParameter("coordinates");
+
+            // Criação da atração com os dados recebidos
             Attraction attraction = new Attraction();
             attraction.setId(id);
             attraction.setName(name);
             attraction.setDescription(description);
-            attraction.setImagePath(imagePath);
-            attraction.setCoordinates(coordinates);
-            attractionDAO.updateAttraction(attraction);
-            response.sendRedirect("admin.jsp");
+            attraction.setImagePath(imagePath);  // Novo campo de imagem
+            attraction.setCoordinates(coordinates);  // Novo campo de coordenadas
+
+            attractionDAO.updateAttraction(attraction);  // Atualiza a atração no banco
+            response.sendRedirect("admin.jsp");  // Redireciona para a página admin.jsp
         } else if ("deleteAttraction".equals(action)) {
             int id = Integer.parseInt(request.getParameter("id"));
-            attractionDAO.deleteAttraction(id);
-            response.sendRedirect("admin.jsp");
-        } else if ("addService".equals(action)) {
+            attractionDAO.deleteAttraction(id);  // Deleta a atração
+            response.sendRedirect("admin.jsp");  // Redireciona para a página admin.jsp
+        }
+
+        // Gerenciamento de Serviços
+        else if ("addService".equals(action)) {
             String name = request.getParameter("name");
             String description = request.getParameter("description");
+            String imagePath = request.getParameter("imagePath");
+            String coordinates = request.getParameter("coordinates");
+
+            // Criação do serviço com os dados recebidos
             Service service = new Service();
             service.setName(name);
             service.setDescription(description);
-            serviceDAO.addService(service);
-            response.sendRedirect("admin.jsp");
+            service.setImagePath(imagePath);  // Novo campo de imagem
+            service.setCoordinates(coordinates);  // Novo campo de coordenadas
+
+            serviceDAO.addService(service);  // Adiciona o serviço no banco
+            response.sendRedirect("admin.jsp");  // Redireciona para a página admin.jsp
         } else if ("updateService".equals(action)) {
             int id = Integer.parseInt(request.getParameter("id"));
             String name = request.getParameter("name");
             String description = request.getParameter("description");
+            String imagePath = request.getParameter("imagePath");
+            String coordinates = request.getParameter("coordinates");
+
+            // Criação do serviço com os dados recebidos
             Service service = new Service();
             service.setId(id);
             service.setName(name);
             service.setDescription(description);
-            serviceDAO.updateService(service);
-            response.sendRedirect("admin.jsp");
+            service.setImagePath(imagePath);  // Novo campo de imagem
+            service.setCoordinates(coordinates);  // Novo campo de coordenadas
+
+            serviceDAO.updateService(service);  // Atualiza o serviço no banco
+            response.sendRedirect("admin.jsp");  // Redireciona para a página admin.jsp
         } else if ("deleteService".equals(action)) {
             int id = Integer.parseInt(request.getParameter("id"));
-            serviceDAO.deleteService(id);
-            response.sendRedirect("admin.jsp");
+            serviceDAO.deleteService(id);  // Deleta o serviço
+            response.sendRedirect("admin.jsp");  // Redireciona para a página admin.jsp
         }
     }
 }

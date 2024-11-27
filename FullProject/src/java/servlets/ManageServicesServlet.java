@@ -55,10 +55,15 @@ public class ManageServicesServlet extends HttpServlet {
         String id = request.getParameter("id"); // Obtém o ID do serviço da requisição
         String name = request.getParameter("name"); // Obtém o nome do serviço da requisição
         String description = request.getParameter("description"); // Obtém a descrição do serviço da requisição
+        String imagePath = request.getParameter("imagePath"); // Obtém o caminho da imagem
+        String coordinates = request.getParameter("coordinates"); // Obtém as coordenadas do serviço
 
-        Service service = new Service(); // Cria um novo objeto Service
+        // Criação de um novo objeto Service
+        Service service = new Service();
         service.setName(name); // Define o nome do serviço
         service.setDescription(description); // Define a descrição do serviço
+        service.setImagePath(imagePath); // Define o caminho da imagem
+        service.setCoordinates(coordinates); // Define as coordenadas
 
         if (id == null || id.isEmpty()) {
             // Adiciona um novo serviço

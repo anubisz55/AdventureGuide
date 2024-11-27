@@ -8,17 +8,21 @@ public class Service {
     private int id;
     private String name;
     private String description;
+    private String imagePath;
+    private String coordinates;  // Coordenadas no formato "latitude,longitude"
 
-    public Service(int id, String name, String description) {
+    // Construtores, getters e setters
+    public Service() {}
+
+    public Service(int id, String name, String description, String imagePath, String coordinates) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.imagePath = imagePath;
+        this.coordinates = coordinates;
     }
 
-    // Construtor vazio para uso no DAO
-    public Service() {}
-
-    // Getters e setters
+    // Getters e Setters
     public int getId() {
         return id;
     }
@@ -42,5 +46,20 @@ public class Service {
     public void setDescription(String description) {
         this.description = description;
     }
-}
 
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
+    public String getCoordinates() {
+        return coordinates;
+    }
+
+    public void setCoordinates(String coordinates) {
+        this.coordinates = coordinates;
+    }
+}
